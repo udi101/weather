@@ -1,0 +1,17 @@
+<div class="weather-display">
+  <div class="weather-display__header">
+    <h2>{{weather?.name}}</h2>
+
+  </div>
+  <div class="weather-display__body">
+    <div class="weather-display__body__data">
+      <div class="weather-display__body__data__icon">
+        <img [src]="getIconSrc()" alt="">
+      </div>
+      <div class="weather-display__body__data__text">
+        {{weather.main.temp}}
+      </div>
+    </div>
+
+    <div class="weather-display__footer"></div>
+  </div>

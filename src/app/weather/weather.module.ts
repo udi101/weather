@@ -11,9 +11,10 @@ import { WeatherEffects } from './state/effects/weather.effects';
 
 import { CitySelectComponent } from './components/city-select/city-select.component';
 import { weatherReducer } from './state/reducers/weather.reducer';
+import { WeatherDisplayComponent } from './components/weather-display/weather-display.component';
 
 @NgModule({
-  declarations: [WeatherComponent, CitySelectComponent],
+  declarations: [WeatherComponent, CitySelectComponent, WeatherDisplayComponent],
   imports: [
     CommonModule,
     SharedModule,

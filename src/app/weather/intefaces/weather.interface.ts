@@ -1,3 +1,8 @@
 export interface IWeather {
-  temp: number
+  temp: number,
+  name: string,
+  weather: [{ icon: string }]
+  main: {
+    temp: number
+  }
 }
