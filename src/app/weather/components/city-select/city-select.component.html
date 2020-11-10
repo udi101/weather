@@ -1,12 +1,9 @@
 <div class="weather">
-  <div class="weather__header">
-    <div class="weather__header__title">Weather</div>
-  </div>
   <div class="weather__body">
-    <select name="" id="" (change)="citySelectedEmitter($event.target.value)">
+    <select name="" id="" (change)="setCityId($event.target.value)">
       <option value="">Select a city</option>
       <option *ngFor="let city of cities" [value]="city.id">{{city.name}}</option>
     </select>
-    <button mat-raised-button color="primary">Update</button>
+    <button mat-raised-button color="primary" (click)="citySelectedEmitter(cityId)">Update</button>
   </div>
 </div>

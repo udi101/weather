@@ -1,10 +1,18 @@
-.weather-display {
+.card {
   display: grid;
   grid-template-rows: 46px 1fr 46px;
   background-image: url(https://mocah.org/uploads/posts/124344-miui-8-weather-background-minimal-hd.png);
   background-size: cover;
   height: 200px;
   width: 400px;
+
+  &__city {
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    font-weight: 500;
+    font-size: 20px;
+  }
 
   &__body {
     position: relative;
@@ -27,8 +35,30 @@
       &__text {
         font-weight: 600;
         font-size: 30px;
-        padding-top: 8px;
+        padding-top: 12px;
+        display: grid;
+        grid-template-rows: 30px auto;
+        justify-content: start;
+        grid-row-gap: 4px;
+
+        &__temp {
+          &::after {
+            content: '\0000B0';
+          }
+        }
+
+        &__desc {
+          font-weight: 500;
+          font-size: 24px;
+        }
       }
     }
+  }
+
+  &__footer {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+    padding: 5px;
   }
 }

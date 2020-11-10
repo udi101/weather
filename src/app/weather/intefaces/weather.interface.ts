@@ -1,8 +1,10 @@
 export interface IWeather {
   temp: number,
   name: string,
-  weather: [{ icon: string }]
+  weather: [{ main: string, icon: string }]
   main: {
-    temp: number
+    temp: number,
+    humidity: number,
+    pressure: number
   }
 }

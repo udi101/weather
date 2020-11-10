@@ -1,23 +1,11 @@
+:host {
+  display: grid;
+  justify-content: start;
+  align-items: center;
+}
+
 .weather {
-  display: inline-grid;
-  grid-template-columns: minmax(400px, auto);
-  grid-template-rows: 40px 80px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
 
-  &__header {
-    display: grid;
-    align-items: center;
-    background-color: #f0f0f0;
-
-    &__title {
-      margin-left: 20px;
-      font-weight: 500;
-      font-size: 20px;
-
-    }
-
-  }
 
   &__body {
     display: grid;

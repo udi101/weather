@@ -12,11 +12,15 @@ export class CitySelectComponent implements OnInit {
 
   @Input() cities: Array<ICity>;
   @Output() citySelected = new EventEmitter<number>();
+  cityId: number;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  setCityId(cityId: number) {
+    this.cityId = cityId;
+  }
   citySelectedEmitter(cityId: number) {
     this.citySelected.emit(cityId);
   }

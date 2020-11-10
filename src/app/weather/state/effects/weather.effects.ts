@@ -25,12 +25,13 @@ export class WeatherEffects {
     )
   });
 
-  @Effect()
-  loadCourseDetails$ = this.actions$.pipe(
-    ofType(WeatherApiActions.getWeather),
-    switchMap((action) => this.weatherService.getWeather(action.cityId).pipe(
-      map((weather: IWeather) => WeatherApiActions.getWeatherSuccess({ weather }))
-    ))
-  );
-}
 
+
+  getWeather$ = createEffect(() => {
+    return this.actions$.pipe(
+      ofType(WeatherApiActions.getWeather),
+      switchMap((action: { type: string, cityId: number }) => this.weatherService.getWeather(action.cityId)),
+      map((weather: IWeather) => WeatherApiActions.getWeatherSuccess({ weather }))
+    )
+  })
+}

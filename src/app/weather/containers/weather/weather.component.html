@@ -1,10 +1,12 @@
 <app-layout>
-  <city-select [cities]="getCities$ | async" (citySelected)="citySelected($event)"></city-select>
+  <div class="card">
+    <div class="card__header">
+      <div class="card__header__title">Weather</div>
+    </div>
 
-
-
-  <weather-display [weather]="getWeather$ | async"></weather-display>
-  {{getWeather$ | async | json}}
-
-
+    <div class="card__body">
+      <city-select [cities]="getCities$ | async" (citySelected)="citySelected($event)"></city-select>
+      <weather-display [weather]="getWeather$ | async"></weather-display>
+    </div>
+  </div>
 </app-layout>
