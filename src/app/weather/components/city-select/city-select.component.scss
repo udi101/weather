@@ -1,0 +1,37 @@
+.weather {
+  display: inline-grid;
+  grid-template-columns: minmax(400px, auto);
+  grid-template-rows: 40px 80px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+
+  &__header {
+    display: grid;
+    align-items: center;
+    background-color: #f0f0f0;
+
+    &__title {
+      margin-left: 20px;
+      font-weight: 500;
+      font-size: 20px;
+
+    }
+
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    place-items: center;
+    column-gap: 4px;
+
+    select {
+      height: 36px;
+      width: 140px;
+      outline: 0;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+    }
+  }
+}

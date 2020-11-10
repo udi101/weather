@@ -1,0 +1,23 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+
+$my-blue: (100: #2050a0,
+  contrast: (50: rgba(0, 0, 0, 0.8),
+  ));
+
+$my-app-primary: mat-palette($my-blue, 100);
+$my-app-accent: mat-palette($mat-orange, 500, 900, A100);
+$my-app-warn: mat-palette($mat-deep-orange);
+
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+@include angular-material-theme($my-app-theme);
+
+
+button {
+  color: white !important;
+}
+
+.primary-color {
+  color: #2050a0 !important;
+}

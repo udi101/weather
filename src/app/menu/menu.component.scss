@@ -1,0 +1,34 @@
+:host {
+  display: block;
+  padding: 0;
+  margin: 0;
+
+  mat-toolbar {
+    height: 40px;
+  }
+
+  div.menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: white;
+
+    &__items {
+      display: flex;
+
+      &__item {
+        margin-right: 20px;
+        outline: none;
+        cursor: pointer;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .router-link-active {
+      color: orange;
+    }
+  }
+}

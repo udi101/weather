@@ -1,0 +1,7 @@
+<app-layout>
+  <city-select [cities]="getCities$ | async" (citySelected)="citySelected($event)"></city-select>
+
+</app-layout>
+
+
+{{getWeather$ | async | json}}
